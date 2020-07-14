@@ -71,7 +71,7 @@ Vec3f refract(const Vec3f &I, const Vec3f &N, const float &refractive_index){
 
     Vec3f n = N;
 
-    // If the ray is inside the object, swap the indices and inver the normal to get the correct result
+    // If the ray is inside the object, swap the indices and invert the normal to get the correct result
     if(cosi < 0){
         cosi = -cosi;
         std::swap(etai, etat);
