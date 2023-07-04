@@ -20,7 +20,7 @@ int envmap_width, envmap_height;
 std::vector<Vec3f> envmap;
 
 // The duck model
-Model duck("duck.obj");
+//Model duck("duck.obj");
 
 struct Light {
     Light(const Vec3f &p, const float &i) : position(p), intensity(i) {}
@@ -179,7 +179,7 @@ void render(const std::vector<Sphere> &spheres, const std::vector<Light> &lights
     std::vector<Vec3f> framebuffer(width * height);
     
     // The heart of the Ray Tracing
-    #pragma omp parallel for
+    //#pragma omp parallel for
     for(size_t j = 0; j < height; j++){
         for(size_t i = 0; i < width; i++){
             float dir_x =  (i + 0.5) -  width / 2.;
